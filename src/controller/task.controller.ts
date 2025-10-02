@@ -11,7 +11,6 @@ import { InvalidTaskUpdateException } from "../exception/invalid-task-update.exc
 import { CreateTaskDTO } from "../model/dto/create-task.dto";
 import { TaskStatusEnum } from "../model/constants/task-status.enum";
 import { InvalidTaskCreationException } from "../exception/invalid-task-creation.exception";
-import { InvalidTaskRemovalException } from "../exception/invalid-task-removal.exception";
 
 // Helper for error responses
 const handleError = (response: Response, error: unknown) => {
@@ -19,8 +18,7 @@ const handleError = (response: Response, error: unknown) => {
     response.status(404).json(error.message);
   } else if (
     error instanceof InvalidTaskUpdateException ||
-    error instanceof InvalidTaskCreationException ||
-    error instanceof InvalidTaskRemovalException
+    error instanceof InvalidTaskCreationException
   ) {
     response.status(400).json(error.message);
   } else {

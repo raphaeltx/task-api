@@ -1,6 +1,6 @@
 export class InvalidTaskUpdateException extends Error {
   constructor(message: string) {
-    super(`Invalid task update. ${message}`);
+    super(`Invalid task. ${message}`);
     this.name = "InvalidTaskUpdateException";
   }
-}   
+}
