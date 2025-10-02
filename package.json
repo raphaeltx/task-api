@@ -5,21 +5,24 @@
   "type": "module",
   "scripts": {
     "start": "npx tsx express.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0",
-    "uuid": "^13.0.0"
+    "express": "^5.1.0"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.27.1",
     "@types/connect": "^3.4.38",
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
     "@types/mime": "^3.0.4",
     "@types/node": "^24.6.2",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.10",
+    "ts-jest": "^29.4.4",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"

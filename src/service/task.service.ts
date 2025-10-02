@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID } from "crypto";
 import { TaskNotFoundException } from "../exception/task-not-found.exception";
 import { InvalidTaskUpdateException } from "../exception/invalid-task-update.exception";
 import { InvalidTaskCreationException } from "../exception/invalid-task-creation.exception";
@@ -36,7 +36,7 @@ export const newTask = (taskDto: CreateTaskDTO): Task => {
   validateTaskTitle(taskDto.title);
 
   const task: Task = {
-    id: uuidv4(),
+    id: randomUUID(),
     title: taskDto.title,
     description: taskDto.description,
     status: TaskStatusEnum.PENDING,
